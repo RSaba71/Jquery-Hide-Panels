@@ -3,18 +3,24 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
+$(document).ready(function()
+{
     $("p").click(function(){
         $(this).hide();
     });
+    
+	$("#reappear").click(function() {
+			$(".panel").slideToggle("slow");
+		});
+	});    
 });
 </script>
 </head>
 <body>
 
-<p>If you click on me, I will disappear.</p>
-<p>Click me away!</p>
-<p>Click me too!</p>
-
+<p class="panel">If you click on me, I will disappear.</p>
+<p class="panel">Click me away!</p>
+<p class="panel">Click me too!</p>
+<div id="reappear">Click for Panels to re-appear </div>
 </body>
 </html>
